@@ -44,3 +44,13 @@ exports.getLostItemByName=async(req,res)=>{
         res.status(400).json({ message: error.message });
     }
 }
+
+// get my reports
+exports.getMyReports = async (req, res) => {
+    try {
+        const items = await Item.find({ userId: req.user.id });
+        res.json(items);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
