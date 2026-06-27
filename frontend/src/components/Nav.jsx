@@ -1,9 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Nav.css";
 
 function Nav() {
   const userName = localStorage.getItem("userName");
-  const token=localStorage.getItem("token");
+  const token = localStorage.getItem("token");
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("userName");
+    navigate("/");
+    window.location.reload(); // ensures UI updates immediately
+  };
+
   return (
     <nav className="navbar">
 
@@ -21,23 +31,31 @@ function Nav() {
 
       <div className="nav-actions">
 
-  {token ? (
-    <div className="profile-circle">
-      {userName.charAt(0).toUpperCase()}
-    </div>
-  ) : (
-    <>
-      <Link to="/login" className="login-btn">
-        Login
-      </Link>
+        {token ? (
+          <div className="profile-section">
 
-      <Link to="/register" className="register-btn">
-        Register
-      </Link>
-    </>
-  )}
+            <div className="profile-circle">
+              {userName?.charAt(0).toUpperCase()}
+            </div>
 
-</div>
+            <button className="logout-btn" onClick={handleLogout}>
+              Logout
+            </button>
+
+          </div>
+        ) : (
+          <>
+            <Link to="/login" className="login-btn">
+              Login
+            </Link>
+
+            <Link to="/register" className="register-btn">
+              Register
+            </Link>
+          </>
+        )}
+
+      </div>
 
     </nav>
   );
