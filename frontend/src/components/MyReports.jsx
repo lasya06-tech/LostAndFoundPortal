@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./MyReports.css";
+const API = import.meta.env.VITE_API_URL;
 
 function MyReports() {
   const [items, setItems] = useState([]);
@@ -8,7 +9,7 @@ function MyReports() {
     const fetchReports = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/items/my-reports",
+          `${API}/api/items/my-reports`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

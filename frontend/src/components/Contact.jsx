@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Contact.css";
+const API = import.meta.env.VITE_API_URL;
 
 function Contact() {
 
@@ -22,7 +23,7 @@ function Contact() {
     try {
 
       const response = await fetch(
-        "http://localhost:5000/api/contact/send",
+        `${API}/api/contact/send`,
         {
           method: "POST",
           headers: {

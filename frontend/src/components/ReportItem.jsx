@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ReportItem.css";
+const API= import.meta.env.VITE_API_URL;
 
 function ReportItem() {
   const [item, setItem] = useState({
@@ -24,7 +25,7 @@ function ReportItem() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/items/report-lost",
+        `${API}/api/items/report-lost`,
         {
           method: "POST",
           headers: {

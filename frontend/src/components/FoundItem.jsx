@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./FoundItem.css";
+const API = import.meta.env.VITE_API_URL;
 
 function FoundItems() {
   const [items, setItems] = useState([]);
@@ -9,7 +10,7 @@ function FoundItems() {
     const fetchItems = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/items/lost-items"
+          `${API}/api/items/lost-items`
         );
 
         const data = await response.json();
