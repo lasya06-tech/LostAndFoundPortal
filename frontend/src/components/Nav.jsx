@@ -11,7 +11,7 @@ function Nav() {
     localStorage.removeItem("token");
     localStorage.removeItem("userName");
     navigate("/");
-    window.location.reload(); // ensures UI updates immediately
+    window.location.reload();
   };
 
   return (
@@ -25,6 +25,12 @@ function Nav() {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/lost-items">Lost Items</Link></li>
         <li><Link to="/found-items">Found Items</Link></li>
+
+        {/* 👇 ADD MY REPORTS ONLY IF LOGGED IN */}
+        {token && (
+          <li><Link to="/my-reports">My Reports</Link></li>
+        )}
+
         <li><Link to="/about">About</Link></li>
         <li><Link to="/contact">Contact</Link></li>
       </ul>
