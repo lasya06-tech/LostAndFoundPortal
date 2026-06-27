@@ -1,0 +1,121 @@
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 8%;
+
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.logo{
+  font-size: 32px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.logo span{
+  color: #dc2626;
+}
+
+.nav-links{
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.nav-links li a{
+  text-decoration: none;
+  color: #111827;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.nav-links li a:hover{
+  color: #dc2626;
+}
+
+.nav-actions{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.login-btn{
+  text-decoration: none;
+
+  padding: 12px 22px;
+
+  border: 2px solid #dc2626;
+
+  color: #dc2626;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  transition: .3s;
+}
+
+.login-btn:hover{
+  background: #fee2e2;
+}
+
+.register-btn{
+  text-decoration: none;
+
+  padding: 12px 22px;
+
+  background: #dc2626;
+
+  color: white;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  transition: .3s;
+}
+
+.register-btn:hover{
+  background: #b91c1c;
+  transform: translateY(-2px);
+}
+
+@media(max-width: 768px){
+
+  .nav-links{
+    display: none;
+  }
+
+  .navbar{
+    padding: 15px 5%;
+  }
+
+  .logo{
+    font-size: 26px;
+  }
+}
+
+.profile-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: pink;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,0 +1,207 @@
+.found-page{
+    min-height:100vh;
+    background:#fafafa;
+    padding:100px 8%;
+}
+
+.found-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.tag{
+    background:#fee2e2;
+    color:#dc2626;
+    padding:10px 18px;
+    border-radius:50px;
+    display:inline-block;
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+.found-header h1{
+    font-size:58px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.found-header h1 span{
+    color:#dc2626;
+}
+
+.found-header p{
+    color:#6b7280;
+    font-size:18px;
+}
+
+.search-container{
+    display:flex;
+    justify-content:center;
+    margin-bottom:60px;
+}
+
+.search-container input{
+    width:500px;
+    padding:18px 24px;
+
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+.search-container input:focus{
+    border-color:#dc2626;
+
+    box-shadow:
+    0 0 0 4px rgba(220,38,38,.12);
+}
+
+.found-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+}
+
+.found-card{
+    background:white;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.06);
+
+    transition:.4s;
+
+    animation:slideUp .8s ease;
+}
+
+.found-card:hover{
+    transform:translateY(-10px);
+}
+
+.item-icon{
+    width:90px;
+    height:90px;
+
+    background:#fee2e2;
+
+    border-radius:20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:45px;
+
+    margin-bottom:20px;
+}
+
+.found-card h3{
+    margin-bottom:15px;
+}
+
+.found-card p{
+    color:#6b7280;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.details{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.details span{
+    color:#dc2626;
+    font-weight:500;
+}
+.no-items{
+    text-align:center;
+    color:#6b7280;
+    margin-top:40px;
+    font-size:30px;
+    font-weight:700;
+}
+.found-card button{
+    margin-top:25px;
+
+    width:100%;
+
+    border:none;
+
+    background:#dc2626;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.found-card button:hover{
+    background:#b91c1c;
+}
+
+.contact-btn{
+  display:block;
+  width:100%;
+
+  margin-top:20px;
+  padding:14px;
+
+  background:#25D366;
+  color:white;
+
+  text-align:center;
+  text-decoration:none;
+
+  border-radius:14px;
+
+  font-weight:600;
+
+  transition:.3s;
+}
+
+.contact-btn:hover{
+  background:#1ebe5d;
+  transform:translateY(-3px);
+}
+
+.no-items{
+  text-align:center;
+  color:#6b7280;
+  margin-top:50px;
+  font-size:28px;
+  font-weight:700;
+}
+
+@keyframes slideUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}

@@ -1,0 +1,35 @@
+.myreports-page {
+    min-height: 100vh;
+    background: #fff5f5;
+    padding: 40px;
+}
+
+.myreports-page h1 {
+    text-align: center;
+    color: #c62828;
+    margin-bottom: 30px;
+}
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 25px;
+}
+
+.report-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.1);
+    border-top: 5px solid #c62828;
+}
+
+.report-card h2 {
+    color: #c62828;
+    margin-bottom: 10px;
+}
+
+.report-card p {
+    color: #555;
+    margin: 8px 0;
+}
